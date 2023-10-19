@@ -358,6 +358,7 @@
 -analyzer:"D:/Unity/Location/2022.3.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CamaraController.cs"
 "Assets/Scripts/JugadorController.cs"
+"Assets/Scripts/Menu.cs"
 "Assets/Scripts/Rotador.cs"
 -langversion:9.0
 
