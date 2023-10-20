@@ -360,6 +360,7 @@
 "Assets/Scripts/JugadorController.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/Rotador.cs"
+"Assets/Scripts/Timer.cs"
 -langversion:9.0
 
 /deterministic

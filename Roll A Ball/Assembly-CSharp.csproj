@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Rotador.cs" />
     <Compile Include="Assets\Scripts\JugadorController.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\CamaraController.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class NewBehaviourScript : MonoBehaviour
@@ -10,8 +11,13 @@ public class NewBehaviourScript : MonoBehaviour
     private Rigidbody rb;
     public float velocidad;
     private int contador;
-    public TMP_Text TextoContador, TextoGanar;
+    public TMP_Text TextoContador, TextoGanar,TextoSiguiente;
+    
     public AudioSource audioSource;
+
+    public AudioClip soundClip;
+    public AudioClip soundClip2;
+
 
 
 
@@ -24,7 +30,9 @@ public class NewBehaviourScript : MonoBehaviour
         setTextoContador();
 
         TextoGanar.text = "";
-        audioSource = GetComponent<AudioSource>();
+        TextoSiguiente.text = "";
+        audioSource.clip = soundClip;
+
 
     }
 
@@ -58,8 +66,27 @@ public class NewBehaviourScript : MonoBehaviour
         if (contador >= 12)
         {
             TextoGanar.text = "¡Ganaste!";
+            TextoSiguiente.text = "Siguiente nivel";
+
+            audioSource.clip = soundClip2;
+            audioSource.Play();
+            Time.timeScale = 0f;
         }
+       
     }
+
+    public void Siguiente()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Nivel2");
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+
 
 
 }
